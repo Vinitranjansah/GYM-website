@@ -12,9 +12,9 @@
 <style>
     body{
        color:white;
-       
+       height: 100vh;
         font-family: 'Kanit', sans-serif; 
-        background: url('E:/GYM website/image/pic.jpg');
+        background: url('pic.jpg');
         background-repeat: no-repeat;
         background-size: cover;
      }
@@ -38,6 +38,9 @@
         margin: 20px auto;
        
      }
+     a{
+      text-decoration: none;
+     }
      .right{
        
         position: absolute;
@@ -57,16 +60,17 @@
      .navbar li a{
         color: white;
         text-decoration: none;
-        padding: 5px 5px;
+        padding: 5px 10px;
      }
      .navbar li a:hover,.navbar li a.active{
       font-size: 22px;
        text-transform: uppercase;
         color:rgba(202, 240, 10, 0.437) ;
+        transition: all ease 0.5s;
      }
      
      .btn{
-        
+       
         color: white;
         background-color: black;
         padding: 2px 5px;
@@ -74,12 +78,15 @@
         border-radius: 10px;
         font-size: 13px;
         cursor: pointer;
+        margin-left: 10px;
      }
      .btn:hover{
       font-size: 15px;
         background-color: rgb(141, 144, 203);
         text-transform: uppercase;
+        transition: all ease 0.3s;
      }
+     
      .container{
       border: 2px solid white;
       margin: 15px 150px;
@@ -108,11 +115,75 @@
    width: 30%;
    margin: auto;
      }
+     form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+     }
+     form .btn{
+      margin-top: 50px;
+     }
+
+     @media screen and (max-width:400px){
+      
+      .navbar{
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+         align-items: center;
+         padding-left: 0;
+      }
+      .mid{
+         width: 50vw;
+      }
+      .container{
+         width: 80vw;
+         margin: auto;
+         padding: 50px 30px;
+      }
+      .container h1{
+         font-size: 18px;
+         margin-top: 0;
+        
+      }
+      form{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+      form .btn{
+         display: block;
+         margin-top: 30px;
+         transform: scale(1.1);
+      }
+      form .btn:hover{
+        transform: scale(1.2);
+        transition: all 0.3s ease;
+      }
+      .right{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-around;
+         height: 15vh;
+         
+      }
+      .right .btn{
+         display: block;
+         
+         transform: scale(105%);
+      }
+      .right .btn:hover{
+         transform: scale(108%);
+        transition: all 0.3s ease;
+      }
+     }
 </style>
 <body>
     <header class="header">
     <div class="left">
-        <img  src="E:/GYM website/image/logo.jpg">
+        <img  src="logo.jpg">
             <div style="line-height:10px;color: white; font-size:12px; ">
             vinit Fitness
         </div>
@@ -127,8 +198,8 @@
             </ul>
     </div>
     <div class="right">
-       <buttton class="btn">Call Us </buttton>
-       <buttton class="btn">Email Us</buttton>
+      <a href="tel:+917004610494"> <buttton  class="btn">Call Us </buttton></a>
+      <a href="mailto:vinitranjan9097@gmail.com"><buttton class="btn">Email Us</buttton></a> 
     </div>
 </header>
 <div class="container">
